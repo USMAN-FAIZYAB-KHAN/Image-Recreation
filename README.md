@@ -51,15 +51,15 @@ Built on Django's **Class-Based Views (CBVs)**, this application delivers clean 
 
 ## 🗄 Screenshots
 
-![Home Page](./Screenshots/home.png)
+![Main Page](./Screenshots/main-screen.png)
 
-![Ingredients Page](./Screenshots/ingredients.png)
+![Recreation of image 1](./Screenshots/recreation-1.png)
 
-![Menu Items Page](./Screenshots/menuitems.png)
+![Recreation of image 2](./Screenshots/recreation-2.png)
 
-![Menu Item Detail Page](./Screenshots/menuitem_detail.png)
+![Recreation of image 3](./Screenshots/recreation-3.png)
 
-![Purchases Page](./Screenshots/purchases.png)
+![Recreation of image 4](./Screenshots/recreation-4.png)
 
 ---
 
