@@ -1,6 +1,6 @@
 ![Banner](./Screenshots/banner.png)
 
-Welcome to the **Django Delights** project! This application is a robust inventory management system tailored for restaurants or food-related businesses. Built using Django and powered by **Class-Based Views (CBVs)**, it offers an intuitive interface and efficient CRUD operations for seamless management.
+Welcome to the **Image Recreation Using Genetic Algorithm** project! This application demonstrates the power of genetic algorithms by evolving binary images to closely resemble a target image. Designed as part of an AI course project, it highlights optimization techniques inspired by natural evolution.
 
 ---
 
@@ -9,44 +9,40 @@ Welcome to the **Django Delights** project! This application is a robust invento
 2. [Features](#-features)
 3. [Screenshots](#-screenshots)
 4. [Installation](#-installation)
-5. [Dependencies](#-dependencies)
+5. [Usage](#-usage)
+6. [Dependencies](#-dependencies)
+7. [Contributors](#-contributors)
 
 ---
 
 ## 📜 Overview
 
-Django Delights is a comprehensive inventory management system designed to cater to restaurants and food-related businesses. Its primary goal is to streamline inventory operations and enhance efficiency by offering:
+This project leverages **Genetic Algorithms (GA)** to reconstruct a predefined target image from a random population of binary (black-and-white) images. By employing techniques like selection, crossover, and mutation, the algorithm iteratively evolves toward a solution.
 
-- **User Authentication**: Secure and seamless login and sign-up system.
-- **Dynamic CRUD Operations**: Easily manage ingredients, menu items, and purchases.
-- **Inventory Tracking**: Real-time updates and tracking of stock levels and purchase costs.
-- **Ingredient-to-Menu Mapping**: Define the required ingredients and their quantities for each menu item.
-
-Built on Django's **Class-Based Views (CBVs)**, this application delivers clean and modular code, ensuring maintainability and scalability.
+### Key Highlights:
+- **Fitness Evaluation**: Matches the generated image to the target based on pixel similarity.
+- **Tournament Selection**: Selects parents for producing the next generation.
+- **Uniform Crossover**: Combines traits from two parents to create offspring.
+- **Mutation**: Introduces randomness to maintain diversity.
+- **Replacement Strategy**: Ensures progressive evolution through generations.
 
 ---
 
 ## ✨ Features
 
-- **User Authentication** 🔑:
-  - Secure login and registration powered by Django's built-in authentication system.
-  - Session management to ensure data security.
+- **Genetic Algorithm Implementation**:
+  - Chromosome Representation: Binary images as 2D arrays of 0s and 1s.
+  - Fitness Function: Measures the similarity to the target image.
+  - Iterative Population Evolution: Progressively improves over generations.
 
-- **Effortless Inventory Management** 📦:
-  - Add, view, update, and delete ingredients, menu items, and purchase records.
-  - Automated calculations for total costs and stock updates.
+- **Customizable Parameters**:
+  - **Population Size**: Number of images per generation.
+  - **Mutation Rate**: Likelihood of random pixel flips.
+  - **Crossover Rate**: Probability of combining parent traits.
 
-- **Class-Based Views (CBVs)** ⚡:
-  - Cleaner, reusable view logic for all CRUD operations.
-  - Enhanced maintainability and efficiency.
- 
-- **Ingredient-to-Menu Mapping** 🧾:
-  - Specify the ingredients required for each menu item.
-  - Track quantities of ingredients for accurate inventory management.
-
-- **Real-Time Data Tracking** 📊:
-  - Track purchase costs and inventory levels instantly.
-
+- **Visualization**:
+  - Displays generations of images as they evolve toward the target.
+    
 ---
 
 ## 🗄 Screenshots
@@ -91,11 +87,32 @@ Built on Django's **Class-Based Views (CBVs)**, this application delivers clean 
 
 ---
 
+## 📖 Usage
+
+1. Set your desired target image:
+   - Replace the default target image (`target.png`) in the project directory.
+
+2. Customize algorithm parameters:
+   - Modify `population_size`, `mutation_rate`, and `num_generations` in `config.py`.
+
+3. Run the algorithm:
+   ```bash
+   python main.py
+   ```
+
+4. Observe the evolution:
+   - Check the `output` directory for the final image and generation progress.
+
+---
+
 ## 📦 Dependencies
 
-The following Python libraries are required to run this project:
+The following Python libraries are required:
 
-- **Django**: Backend framework for building the application.
+- **Django**: Framework for the web interface.
+- **Django Channels**: Real-time WebSocket support for live updates.
+- **NumPy**: Efficient array computations.
+- **Pillow**: Image handling and processing.
 
 Install all dependencies with:
 ```bash
@@ -104,4 +121,11 @@ pip install -r requirements.txt
 
 ---
 
-Enjoy using Django Delights! Feel free to contribute or provide feedback. 😊
+## 🤝 Contributors
+- [**Usman Faizyab Khan**](https://github.com/USMAN-FAIZYAB-KHAN)  
+- [**Muhammad Zunain**]()  
+- **Syed Abdul Basit**
+
+---
+
+Enjoy using this project! Contributions and feedback are welcome. 😊
