@@ -118,37 +118,39 @@ pip install -r requirements.txt
 
 ### 🧑‍💻 Technical Details  
 
-1. **Initialization**: Create a population of random binary images, each pixel representing a gene (0 or 1).  
+This project utilizes a genetic algorithm to evolve a population of binary images, gradually improving them to match a target image. The process involves several key steps:  
+
+1. **Initialization**: A population of random binary images is created, with each pixel representing a gene (0 or 1). These images serve as the starting point for the algorithm.  
    <div align="center">
      <img src="./Screenshots/initialization.png" alt="Initialization" width="300">
    </div>  
 
-2. **Fitness Evaluation**: Measure similarity to the target image by counting matching pixels.  
+2. **Fitness Evaluation**: The fitness of each image is evaluated by comparing it to the target image. The algorithm counts the number of pixels in the population that match the corresponding pixels in the target, and this number is used as the fitness score.  
    <div align="center">
      <img src="./Screenshots/fitness.png" alt="Fitness Evaluation" width="300">
    </div>  
 
-3. **Selection**: Use tournament selection to choose parent images based on fitness.  
+3. **Selection**: Tournament selection is applied to choose parent images based on their fitness. A subset of individuals is selected at random, and the one with the highest fitness in this subset is chosen to act as a parent.  
    <div align="center">
      <img src="./Screenshots/selection.png" alt="Selection" width="500">
    </div>  
 
-4. **Crossover**: Combine parents using uniform crossover, mixing traits via a random mask.  
+4. **Crossover**: Parents are combined using uniform crossover, where traits (pixels) from each parent are mixed according to a random mask. This introduces genetic variation by blending features from the parent images.  
    <div align="center">
      <img src="./Screenshots/crossover.png" alt="Crossover" width="300">
    </div>  
 
-5. **Mutation**: Flip a small percentage of pixels to introduce diversity.  
+5. **Mutation**: To further promote diversity, a small percentage of pixels in the offspring are flipped. This mutation introduces random changes to the images, helping to avoid premature convergence.  
    <div align="center">
      <img src="./Screenshots/mutation.png" alt="Mutation" width="300">
    </div>  
 
-6. **Replacement**: Replace the old population with offspring to progress toward the target image.  
+6. **Replacement**: The old population is replaced by the new generation of offspring. This allows the algorithm to progress toward the target image over multiple iterations.  
    <div align="center">
      <img src="./Screenshots/replacement.png" alt="Replacement" width="300">
    </div>  
 
-7. **Convergence**: Repeat for multiple generations until the population closely matches the target.  
+7. **Convergence**: These steps are repeated for several generations, with the population gradually evolving to closely match the target image. The process continues until a satisfactory solution is found.
 
 ---
 
