@@ -11,7 +11,8 @@ Welcome to the **Image Recreation Using Genetic Algorithm** project! This applic
 4. [Installation](#-installation)
 5. [Usage](#-usage)
 6. [Dependencies](#-dependencies)
-7. [Contributors](#-contributors)
+7. [Technical Details](#-technical-details)
+8. [Contributors](#-contributors)
 
 ---
 
@@ -115,14 +116,38 @@ pip install -r requirements.txt
 
 ---
 
-### 🧑‍💻 Technical Details: Genetic Algorithm Flow  
+### 🧑‍💻 Technical Details  
 
 1. **Initialization**: Create a population of random binary images, each pixel representing a gene (0 or 1).  
+   <div align="center">
+     <img src="./Screenshots/initialization.png" alt="Initialization" width="300">
+   </div>  
+
 2. **Fitness Evaluation**: Measure similarity to the target image by counting matching pixels.  
+   <div align="center">
+     <img src="./Screenshots/fitness.png" alt="Fitness Evaluation" width="300">
+   </div>  
+
 3. **Selection**: Use tournament selection to choose parent images based on fitness.  
+   <div align="center">
+     <img src="./Screenshots/selection.png" alt="Selection" width="500">
+   </div>  
+
 4. **Crossover**: Combine parents using uniform crossover, mixing traits via a random mask.  
+   <div align="center">
+     <img src="./Screenshots/crossover.png" alt="Crossover" width="300">
+   </div>  
+
 5. **Mutation**: Flip a small percentage of pixels to introduce diversity.  
+   <div align="center">
+     <img src="./Screenshots/mutation.png" alt="Mutation" width="300">
+   </div>  
+
 6. **Replacement**: Replace the old population with offspring to progress toward the target image.  
+   <div align="center">
+     <img src="./Screenshots/replacement.png" alt="Replacement" width="300">
+   </div>  
+
 7. **Convergence**: Repeat for multiple generations until the population closely matches the target.  
 
 ---
