@@ -92,19 +92,10 @@ With the Django web interface, users can upload target images and monitor real-t
 
 ## 📖 Usage
 
-1. Set your desired target image:
-   - Replace the default target image (`target.png`) in the project directory.
-
-2. Customize algorithm parameters:
-   - Modify `population_size`, `mutation_rate`, and `num_generations` in `config.py`.
-
-3. Run the algorithm:
-   ```bash
-   python main.py
-   ```
-
-4. Observe the evolution:
-   - Check the `output` directory for the final image and generation progress.
+1. Upload or select an image from the web interface.  
+2. The genetic algorithm starts automatically after the image is selected or uploaded.  
+3. View live updates of the recreation process on the web interface.  
+4. The final recreated image is displayed upon completion.  
 
 ---
 
@@ -121,6 +112,18 @@ Install all dependencies with:
 ```bash
 pip install -r requirements.txt
 ```
+
+---
+
+### 🧑‍💻 Technical Details: Genetic Algorithm Flow  
+
+1. **Initialization**: Create a population of random binary images, each pixel representing a gene (0 or 1).  
+2. **Fitness Evaluation**: Measure similarity to the target image by counting matching pixels.  
+3. **Selection**: Use tournament selection to choose parent images based on fitness.  
+4. **Crossover**: Combine parents using uniform crossover, mixing traits via a random mask.  
+5. **Mutation**: Flip a small percentage of pixels to introduce diversity.  
+6. **Replacement**: Replace the old population with offspring to progress toward the target image.  
+7. **Convergence**: Repeat for multiple generations until the population closely matches the target.  
 
 ---
 
