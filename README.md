@@ -67,8 +67,8 @@ With the Django web interface, users can upload target images and monitor real-t
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/USMAN-FAIZYAB-KHAN/Django-Delights.git
-   cd Django-Delights
+   git clone https://github.com/USMAN-FAIZYAB-KHAN/Image-Recreation.git
+   cd Image-Recreation
    ```
 
 2. Create and activate a virtual environment (optional but recommended):
